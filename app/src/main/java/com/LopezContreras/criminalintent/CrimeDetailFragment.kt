@@ -103,18 +103,19 @@ class CrimeDetailFragment : Fragment() {
                 val photoFile = File(requireContext().applicationContext.filesDir, photoName)
                 val photoUri = FileProvider.getUriForFile(
                     requireContext(),
-                    "com.bignerdranch.android.criminalintent.fileprovider",
+                    "com.LopezContreras.criminalintent.fileprovider",
                     photoFile
                 )
 
                 takePhoto.launch(photoUri)
             }
-
+            /*
             val captureImageIntent = takePhoto.contract.createIntent(
                 requireContext(),
                 null
             )
             crimeCamera.isEnabled = canResolveIntent(captureImageIntent)
+        */
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
